@@ -1,7 +1,7 @@
-class MovieRepository {
+export default class MovieRepository {
     async getMoviesFromDatabase() {
       try {
-        const response = await fetch('https://example.com/movies');
+        const response = await fetch(MOVIE_URL);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
